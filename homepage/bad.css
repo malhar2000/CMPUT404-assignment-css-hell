@@ -1,0 +1,826 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allan:wght@700&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* navigation bar */
+
+nav {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    z-index: 100;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    color: #fff;
+    font-family: cursive;
+    width: 200px;
+    letter-spacing: 3px;
+}
+
+.navbar-brand h4 {
+    margin: 5px 10px;
+}
+
+.navbar-item {
+    margin: 20px 35px;
+
+}
+
+.navbar-link {
+    color:  whitesmoke;
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 19px;
+    transition: box-shadow 0.7s ease-in-out;
+}
+
+.navbar-link:hover {
+    box-shadow: inset 150px 0 0 0 rgba(153, 53, 53, 0.7);
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+}
+
+
+
+.nav-links {
+    display: flex;
+    /* width: 50%; */
+    margin-left: auto;
+    justify-content: space-around;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+.burger {
+    display: none;
+    margin-left: auto;
+}
+
+
+
+
+@media screen and (max-width: 850px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 640px;
+        top: 60px;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translate(100%);
+        z-index: 10;
+        transition: transform 0.7s ease-in;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    transform: translate(0%);
+}
+
+/* navigation end */
+
+/* ________________________________________________________________________ */
+
+/* section1 start */
+#section1 {
+    width: 100%;
+    height: 700px;
+     
+    background: yellow;
+    background-size: cover;
+
+}
+
+#centerEverything {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 640px;
+}
+
+.contact {
+
+    text-align: center;
+
+}
+
+.fa {
+    font-size: 40px;
+    color: black;
+    padding: 0px 10px;
+    transition: font-size 400ms;
+}
+
+.fa:hover {
+    font-size: 60px;
+}
+
+
+
+#heading h1 {
+    font-family: 'Send Flowers', cursive, sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: 0.1rem;
+
+    color: red;
+    /*how to add linear gradient to text*/
+   
+
+}
+
+#myImage img {
+    border-radius: 50%;
+}
+
+#intro {
+    font-size: 3.5rem;
+    font-family: 'Send Flowers', cursive;
+    color: whitesmoke;
+    font-weight: 1000;
+    text-shadow: 1rem 1rem 1rem black;
+}
+
+.icons img {
+    position: absolute;
+    transform: translate(-50%, 0) scale(0);
+    transition: transform 0.3s;
+
+}
+
+.icons img.change {
+    transform: translate(-50%, 0) scale(1);
+    transition: transform 0.3s 0.3s;
+}
+
+#modal {
+
+    width: 50%;
+    padding: 1rem;
+    background-color: #fff;
+    color: #444;
+    position: absolute;
+    z-index: 10;
+    border-radius: 10px;
+    padding-bottom: 40px;
+    top: 15%;
+    /* /*the close button was not working but as soon as i added transform it worked 
+    even tho (0, 0) does not work...*/
+    /* transform: translate(0, 50%);  */
+}
+
+.close-tab {
+    background: transparent;
+    font-size: 40px;
+    position: relative;
+    left: 95%;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+#modal h1 {
+    font-family: cursive;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#modal p {
+    padding-top: 20px;
+    font-size: 18px;
+    margin-bottom: 30px;
+
+}
+
+.resume-modal{
+    text-align: center;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    
+    background-color: rgb(59, 50, 50);
+    line-height: 35px; 
+    margin: 0 auto;
+    transition: box-shadow 0.5s ease-in-out;
+}
+.resume-modal:hover{
+    box-shadow: inset 150px 0 0 rgba(0, 0, 0, 0.8);
+}
+
+.resume-modal a{
+    color: wheat;
+    font-size: 20px;
+}
+
+.blur {
+    width: 100%;
+    height: 640px;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    position: absolute;
+    z-index: 5;
+
+
+
+}
+
+.hide {
+    display: none;
+}
+
+/*-----------------------------Section1 END-----------------------------------*/
+
+
+
+
+
+/* Section 2 */
+
+
+#section2 {
+    height: 100vh;
+    /* background: url("images/tylersection2.jpg")  center center no-repeat;
+     background-size: cover; */
+    /* background-attachment: fixed; */
+    /* background-color: skyblue; */
+    /* Credit Linear-gradient: https://cssgradient.io/swatches/ */
+    background: red;
+    /* fallback for old browsers */
+    background: pink;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: pink;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.options-courses {
+    width: 350px;
+    height: 100vh;
+
+    background: green;
+    /* background-size: 20px; */
+    text-align: center;
+    position: absolute;
+}
+
+.options-ul li {
+    padding: 35px;
+    list-style: none;
+}
+
+.options-link {
+    color: wheat;
+    font-size: 1.3rem;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    background: transparent;
+    transition: font-size 400ms;
+}
+
+.options-link:hover {
+    color: white;
+    text-decoration: underline;
+    font-size: 1.7rem;
+}
+
+.options-active {
+    color: pink;
+    text-decoration: underline;
+    text-shadow: 1px 1px 4px black;
+    font-size: 1.7rem;
+}
+
+.options-content {
+    width: 600px;
+    position: absolute;
+    margin-left: 600px;
+    color: yellow;
+    text-align: center;
+
+    padding-top: 200px;
+}
+
+.option-p {
+    color: darkblue;
+    font-family: 'Indie Flower', cursive;
+}
+
+.anime-p {
+    animation: fadeIn linear 5s;
+
+}
+
+.anime-h {
+    animation: fadeIn linear 3s;
+    font-family: 'Permanent Marker', cursive;
+}
+
+
+
+/* ________________________________________________________________________ */
+
+/* section 3 */
+#section3 {
+
+    /* height:100vh; */
+    /* credits tyler from Unsplashs */
+    background: navy;
+    background-size: cover;
+    padding: 30px 30px;
+}
+
+.project-heading {
+    text-align: center;
+    font-size: 35px;
+    color: #fff;
+    text-shadow: 2px 2px 0px black;
+    font-family: cursive;
+    letter-spacing: 0.3rem;
+}
+
+.project-heading p {
+    font-size: 14px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.project-container {
+    height: 300px;
+    width: 400px;
+    background: transparent;
+    margin: 10px 20px;
+    border: 5px solid #fff;
+    border-radius: 6px;
+    position: relative;
+    transition: box-shadow 2s;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+.project-container:hover {
+    box-shadow: 5px 5px 0px #e3170aff,
+        7px 7px 0px #a9e5bbff,
+        9px 9px 0px #fcd200,
+        11px 11px 0px #f7b32bff,
+        13px 13px 0px #ffb3c1;
+}
+
+.project-container:hover>a>img {
+    opacity: 0.4;
+}
+
+
+
+.projects a img {
+
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+
+}
+
+.projects-h2 {
+    position: absolute;
+    top: 50px;
+
+    left: 50px;
+    visibility: hidden;
+    color: #fff;
+
+}
+
+.projects-p {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 60%;
+    visibility: hidden;
+    color: #fff;
+
+}
+
+
+
+.watch-demo {
+    position: absolute;
+    top: 80%;
+    left: 37.5%;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    background-color: red;
+    opacity: 0.6;
+    color: white;
+}
+
+.watch-demo:hover {
+    opacity: 1;
+}
+
+.project-container::before {
+    content: linear-gradient(to top right, #28b487, #7dd56f);
+    position: absolute;
+    top: 4vw;
+    left: 82%;
+    width: 0.4rem;
+    height: 80%;
+    background-color: #fff;
+    visibility: hidden;
+
+
+}
+
+.project-container::after {
+    content: linear-gradient(to top right, #28b487, #7dd56f);
+    position: absolute;
+    top: 25%;
+    left: 2rem;
+    width: 80%;
+    height: 0.4rem;
+    visibility: hidden;
+
+}
+
+.project-container:hover>a>p {
+    visibility: visible;
+    animation: fadeIn linear 2s;
+    -webkit-animation: fadeIn linear 3s;
+    -moz-animation: fadeIn linear 3s;
+    -o-animation: fadeIn linear 3s;
+    -ms-animation: fadeIn linear 3s;
+}
+
+.project-container:hover>a>h2 {
+    visibility: visible;
+    animation: fadeIn linear 2s;
+    -webkit-animation: fadeIn linear 2s;
+    -moz-animation: fadeIn linear 3s;
+    -o-animation: fadeIn linear 3s;
+    -ms-animation: fadeIn linear 3s;
+}
+
+
+.project-container:hover::after {
+    visibility: visible;
+    animation: fadeIn linear 2s;
+    -webkit-animation: fadeIn linear 2s;
+    -moz-animation: fadeIn linear 3s;
+    -o-animation: fadeIn linear 3s;
+    -ms-animation: fadeIn linear 3s;
+}
+
+.project-container:hover::before {
+    visibility: visible;
+    animation: fadeIn linear 2s;
+    -webkit-animation: fadeIn linear 3s;
+    -moz-animation: fadeIn linear 3s;
+    -o-animation: fadeIn linear 3s;
+    -ms-animation: fadeIn linear 3s;
+}
+
+/* ________________________________________________________________________ */
+
+/*section4 languages */
+#section4 {
+    padding: 10px;
+
+    text-align: center;
+    color: snow;
+    /* https://cssgradient.io/gradient-backgrounds/ */
+    background: black;
+    /* fallback for old browsers */
+
+}
+
+ul li {
+    list-style: none;
+
+}
+
+#languages h3 {
+    margin: 10px;
+    color: black;
+    font-size: 24px;
+    border-radius: 10px;
+    /* https://cssgradient.io/swatches/ */
+    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+    height: 50px;
+}
+
+.each-language ul {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color:  cornsilk;
+    font-family: 'Allan', cursive;
+    letter-spacing: 3px;
+    text-align: center;
+    text-shadow: 1px 1px #ff0000;
+
+}
+
+/* ________________________________________________________________________ */
+/* section5 footer */
+
+#section5 {
+    height: 100px;
+    background-color: #333;
+}
+
+.footer {
+    padding-top: 14px;
+    text-align: center;
+    color: #fff;
+}
+
+/* ________________________________________________________________________ */
+
+
+/* animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .options-content {
+        margin-left: 300px;
+        width: 140px;
+        padding-top: 0px;
+    }
+
+    .options-courses {
+        width: 200px;
+        
+
+    }
+    .options-link{
+        font-size: 12px;
+    }
+    .options-link:hover{
+        font-size: 14px;
+    }
+    .option-p {
+        font-size: 10px;
+    }
+
+    .anime-h {
+        font-size: 10px;
+    }
+
+    .watch-demo {
+        top: 60%;
+    }
+    #heading h1{
+        font-size: 3rem;
+    }
+
+    .options-content{
+        margin-left: 210px;
+    }
+
+}
+
+@media (max-width: 600px) and (min-width: 501px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .options-content {
+        margin-left: 300px;
+        width: 200px;
+        padding-top: 0px;
+    }
+
+    .options-courses {
+        width: 240px;
+        
+
+    }
+    .options-link{
+        font-size: 14px;
+    }
+    .options-link:hover{
+        font-size: 16px;
+    }
+    .option-p {
+        font-size: 12px;
+    }
+
+    .anime-h {
+        font-size: 12px;
+    }
+
+    .watch-demo {
+        top: 60%;
+    }
+    #heading h1{
+        font-size: 3rem;
+    }
+
+    .options-content{
+        margin-left: 280px;
+    }
+
+}
+
+
+
+@media (max-width: 700px) and (min-width: 601px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .options-content {
+        margin-left: 400px;
+        width: 200px;
+        padding-top: 0px;
+    }
+
+    .option-p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 800px) and (min-width: 701px) {
+    body {
+        overflow-x: hidden;
+    }
+  
+
+    .options-content {
+        margin-left: 500px;
+        width: 250px;
+        padding-top: 0px;
+    }
+
+    .option-p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 900px) and (min-width: 801px) {
+    .options-content {
+        margin-left: 500px;
+        width: 300px;
+        padding-top: 60px;
+    }
+
+    .option-p {
+        font-size: 15px;
+    }
+
+}
+
+
+@media (max-width: 1200px) and (min-width: 901px) {
+    .options-content {
+        margin-left: 500px;
+        width: 400px;
+        padding-top: 100px;
+    }
+
+
+}
+
+
+
+
+/* All height media queries */
+@media (max-height: 530px) {
+    .options-link {
+        font-size: 14px;
+    }
+
+    .options-link:hover {
+        font-size: 16px;
+    }
+
+    .options-ul li {
+        padding: 23px;
+    }
+}
+
+@media (max-height: 740px) {
+    .options-ul li {
+        padding: 30px;
+    }
+}
+
+@media (max-height: 660px) {
+    .options-ul li {
+        padding: 25px;
+    }
+}
+
+@media (max-height: 600px) {
+    .options-ul li {
+        padding: 20px;
+    }
+
+    #section2 {
+        overflow: hidden;
+    }
+
+
+}
